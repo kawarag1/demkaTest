@@ -134,7 +134,7 @@ namespace demkaTest.Pages
 
         private void Orders_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Orders());
+            NavigationService.Navigate(new OrdersPage());
         }
 
         private void ManufacturerSort_SelectionChanged(object sender, SelectionChangedEventArgs e)

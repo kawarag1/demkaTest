@@ -58,7 +58,7 @@ namespace demkaTest
             {
                 Header.Text = "Редактирование товара";
             }
-            else if (FrmMain.Content is Orders)
+            else if (FrmMain.Content is OrdersPage)
             {
                 Header.Text = "Заказы";
             }
