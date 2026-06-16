@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bdc329b5bf5d440595a0f32fb656cb18" Name="Diagram1">
+        <EntityTypeShape EntityType="demkaTestModel.Categories" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="demkaTestModel.Manufacturer" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="demkaTestModel.OrderContents" Width="1.5" PointX="5.25" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="demkaTestModel.Orders" Width="1.5" PointX="3" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="demkaTestModel.PickUpPoints" Width="1.5" PointX="0.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="demkaTestModel.Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="demkaTestModel.Roles" Width="1.5" PointX="1.5" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="demkaTestModel.Statuses" Width="1.5" PointX="0.75" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="demkaTestModel.Supplier" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="demkaTestModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="demkaTestModel.Units" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="demkaTestModel.Users" Width="1.5" PointX="0.75" PointY="18.375" IsExpanded="true" />
+        <AssociationConnector Association="demkaTestModel.FK_Product_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="demkaTestModel.FK_Product_Manufacturer" ManuallyRouted="false" />
+        <AssociationConnector Association="demkaTestModel.FK_OrderContents_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="demkaTestModel.FK_OrderContents_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="demkaTestModel.FK_Orders_PickUpPoints" ManuallyRouted="false" />
+        <AssociationConnector Association="demkaTestModel.FK_Orders_Statuses" ManuallyRouted="false" />
+        <AssociationConnector Association="demkaTestModel.FK_Orders_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="demkaTestModel.FK_Product_Supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="demkaTestModel.FK_Product_Units" ManuallyRouted="false" />
+        <AssociationConnector Association="demkaTestModel.FK_Users_Roles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
