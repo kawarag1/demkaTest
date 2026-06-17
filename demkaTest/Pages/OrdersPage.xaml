@@ -14,13 +14,20 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <ListView x:Name="LViewOrders" Grid.Row="1">
+        <Grid x:Name="AdminPanel" Grid.Row="0" Background="#DAA520">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button x:Name="AddOrder" Content="Добавить заказ" Margin="0,0,30,0" Width="160" Height="30" Click="AddOrder_Click"/>
+                <Button x:Name="DeleteOrder" Content="Удалить заказ" Width="160" Height="30" Click="DeleteOrder_Click"/>
+            </StackPanel>
+        </Grid>
+        
+        <ListView x:Name="LViewOrders" Grid.Row="1" MouseDoubleClick="LViewOrders_MouseDoubleClick">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Border BorderBrush="Black" BorderThickness="1">
+                    <Border BorderBrush="Black" BorderThickness="1" Width="600">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
 
@@ -31,18 +38,21 @@
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
 
-                            <TextBlock Text="{Binding id}" FontWeight="Bold" Grid.Row="0"/>
+                            <TextBlock Text="{Binding id}" FontWeight="Bold" Grid.Row="0" />
                             <TextBlock Text="{Binding Statuses.name}" Grid.Row="1"/>
                             <StackPanel Orientation="Horizontal" Grid.Row="2">
-                                <TextBlock Text="{Binding PickUpPoints.index}"/>
+                                <TextBlock Text="{Binding PickUpPoints.postIndex}"/>
+                                <TextBlock Text=", "/>
                                 <TextBlock Text="{Binding PickUpPoints.city}"/>
+                                <TextBlock Text=", "/>
                                 <TextBlock Text="{Binding PickUpPoints.street}"/>
+                                <TextBlock Text=" "/>
                                 <TextBlock Text="{Binding PickUpPoints.houseNumber}"/>
                             </StackPanel>
                             <TextBlock Text="{Binding CreateDate}" Grid.Row="3"/>
 
-                            <Border BorderBrush="Black" BorderThickness="1" Margin="10">
-                                <TextBlock Grid.Column="1" Grid.RowSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding DeliveryDate}"/>
+                            <Border BorderBrush="Black" BorderThickness="1" Margin="10" Grid.RowSpan="3"  Grid.Column="1">
+                                <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding DeliveryDate}"/>
                             </Border>
                         </Grid>
                     </Border>
